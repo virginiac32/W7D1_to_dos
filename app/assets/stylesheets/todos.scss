@@ -1,0 +1,73 @@
+// Place all the styles related to the Todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* line 6, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+/* line 8, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+div {
+  display: flex;
+  flex-direction: column;
+  background: #98FF88;
+}
+
+/* line 12, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+/* line 15, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+form.new_form {
+  border: #4C7F44 solid 5px;
+  margin: 15px;
+  padding: 10px;
+}
+
+/* line 18, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+/* line 22, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+body {
+  font-family: sans-serif;
+  color: #2B7F1E;
+}
+
+/* line 28, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+button {
+  size: a5;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 0px 10px;
+  font-size: medium;
+}
+
+/* line 36, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+button:hover {
+  cursor: pointer;
+}
+
+/* line 40, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* line 44, /Users/appacademy/Desktop/W7D1/todos/app/assets/stylesheets/todos.scss */
+li {
+  list-style: none;
+  border: #44CC2F solid 3px;
+  margin: 20px;
+  padding: 20px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-start;
+}
+
+li span {
+  padding-left: 40px;
+}
+
+li span:hover {
+  cursor: pointer;
+  color: #1C3F14;
+}
+
+
+ul {
+    border: #4C7F44 solid 5px;
+    padding: 20px;
+    margin: 20px;
+}

@@ -12,19 +12,19 @@ class TodoListItem extends React.Component {
     super(props);
   }
 
-  removeTodo(event) {
+  demolishTodo(event) {
     event.preventDefault();
-    this.props.removeTodo(this.props.todo.id);
+    this.props.demolishTodo(this.props.todo.id);
   }
 
   isDone() {
     return this.props.todo.done === true ? "Undo" : "Done";
   }
 
-  updateTodo(event) {
+  changeTodo(event) {
     event.preventDefault();
     let done = this.props.todo.done ? false : true;
-    this.props.receiveTodo({id: this.props.todo.id, done: done});
+    this.props.changeTodo({id: this.props.todo.id, done: done});
   }
 
   toggleDetailView(event) {
@@ -33,12 +33,22 @@ class TodoListItem extends React.Component {
     this.props.receiveTodo({id: this.props.todo.id, detail: detail});
   }
 
+  fetchDetail(){
+    // console.log("details shown");
+    if(this.props.todo.detail)
+    {
+      return this.props.todo.body;
+    }
+    return "";
+  }
+
   render(){
     return (
       <li><span onClick={this.toggleDetailView.bind(this)}>{this.props.todo.title}</span>
-        <button onClick={this.removeTodo.bind(this)}>Delete</button>
-        <button onClick={this.updateTodo.bind(this)}>{this.isDone()}</button>
+        <button onClick={this.demolishTodo.bind(this)}>Delete</button>
+        <button onClick={this.changeTodo.bind(this)}>{this.isDone()}</button>
         <br></br>
+        <text>{this.fetchDetail()}</text>
       </li>
     );
   }

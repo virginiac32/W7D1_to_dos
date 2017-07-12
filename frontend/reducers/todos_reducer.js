@@ -22,8 +22,9 @@ const todosReducer = (state = initialState, action) => {
     case RECEIVE_TODO:
       return merge({}, state, {[action.todo.id]: action.todo});
     case RECEIVE_TODOS:
+      console.log(action);
       let hsh={};
-      for (let i = 0; i < action.todos.length; i++) {
+      for (let i = 0; action.todos &&  i< action.todos.length; i++) {
         hsh[action.todos[i].id]=action.todos[i];
       }
       return hsh;

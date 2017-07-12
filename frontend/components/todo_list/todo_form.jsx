@@ -12,20 +12,20 @@ import merge from 'lodash/merge';
 //   );
 // };
 
-
-
 class TodoForm extends React.Component {
 
   constructor(props){
     super(props);
-    this.state={title: "",body: "", id: ""};
+    this.state = {title: "",body: "", id: ""};
   }
 
   submitForm (event) {
     event.preventDefault();
-    this.props.receiveTodo({id: uniqueId(),
+    this.props.createTodo({
       title: this.state.title,
-      body: this.state.body});
+      body: this.state.body}).then(
+        () => this.setState({title: "", body: ""})
+      );
   }
 
   changeTitle (event) {
